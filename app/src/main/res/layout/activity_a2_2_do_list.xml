@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".A2_2DoList">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/Btn_Ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:clickable="true"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:srcCompat="@drawable/btmas" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="11dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/Btn_Ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Txt1_A2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Título"
+                android:textColor="#181896"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="12dp"
+                tools:layout_editor_absoluteY="63dp" />
+
+            <EditText
+                android:id="@+id/EditText_Titulo"
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+                android:contentDescription="Inserte título de su tarea"
+                android:ems="10"
+                android:hint="Inserte el título de su tarea"
+                android:inputType="textPersonName"
+                android:textColor="#030303"
+                android:textStyle="italic"
+                tools:layout_editor_absoluteX="63dp"
+                tools:layout_editor_absoluteY="134dp" />
+
+            <TextView
+                android:id="@+id/Txt2_A2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:textColor="#181896"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="123dp"
+                tools:layout_editor_absoluteY="152dp" />
+
+            <EditText
+                android:id="@+id/EditText_Descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:ems="10"
+                android:hint="Describe tu tarea"
+                android:inputType="textMultiLine"
+                android:textColor="#030303"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Txt3_A2"
+                    android:layout_width="217dp"
+                    android:layout_height="wrap_content"
+                    android:text="¿Es importante?"
+                    android:textColor="#181896"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ToggleButton
+                    android:id="@+id/Btn_Importante"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_star"
+                    android:text="ToggleButton"
+                    android:textOff=""
+                    android:textOn=""
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="151dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Txt4_A2"
+                    android:layout_width="507dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Selecciona la prioridad"
+                    android:textColor="#181896"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/A2_Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Txt5_A2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_weight="1"
+                    android:text="Fecha de vencimiento"
+                    android:textColor="#181896"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="362dp" />
+
+                <Switch
+                    android:id="@+id/Switch_Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:layout_editor_absoluteX="222dp"
+                    tools:layout_editor_absoluteY="362dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Txt_Hora"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Hora"
+                    android:textColor="#030331"
+                    android:textSize="18sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/Txt_Fecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Fecha"
+                    android:textColor="#030331"
+                    android:textSize="18sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Btn_Hora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="Hora" />
+
+                <Button
+                    android:id="@+id/Btn_Fecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="Fecha" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
